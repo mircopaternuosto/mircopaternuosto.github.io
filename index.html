@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mirco Paternuosto | Portfolio</title>
+<meta name="description" content="Engineering portfolio of Mirco Paternuosto, junior mechanical engineer, MSc KU Leuven.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #19173f;
+    --navy-2: #24215a;
+    --teal: #1fbfb0;
+    --ink: #1c1b33;
+    --muted: #5d5c75;
+    --line: #dddce8;
+    --bg: #f6f6fa;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.5;
+  }
+  a { color: inherit; }
+
+  header {
+    background: var(--navy);
+    color: #fff;
+    padding: 48px 20px 40px;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  h1 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.2rem, 6vw, 3.6rem);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+  .role { margin-top: 8px; font-size: 1.1rem; color: #d5d4ea; }
+  .contacts { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 0.95rem; }
+  .contacts a { color: #bfbee0; text-decoration: none; border-bottom: 1px solid transparent; }
+  .contacts a:hover { color: #fff; border-color: var(--teal); }
+  .actions { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+  .btn-primary { background: var(--teal); color: var(--navy); }
+  .btn-primary:hover { filter: brightness(1.08); }
+  .btn-ghost { border: 1px solid #4a4885; color: #fff; }
+  .btn-ghost:hover { border-color: var(--teal); }
+
+  main { padding: 40px 20px 56px; }
+  h2 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+  }
+  h2::before {
+    content: "";
+    display: block;
+    width: 48px; height: 3px;
+    background: var(--teal);
+    margin-bottom: 10px;
+  }
+  .projects {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 12px;
+    margin-bottom: 44px;
+  }
+  .projects a {
+    display: block;
+    height: 100%;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    text-decoration: none;
+    transition: border-color .15s, transform .15s;
+  }
+  .projects a:hover { border-color: var(--teal); transform: translateY(-2px); }
+  .p-title { font-weight: 600; font-size: 1.02rem; }
+  .p-meta { font-size: 0.85rem; color: var(--muted); margin-top: 4px; }
+  .p-num { float: right; font-size: 0.8rem; color: var(--teal); font-weight: 600; }
+
+  .viewer {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .viewer object { display: block; width: 100%; height: 85vh; min-height: 600px; }
+  .fallback { padding: 40px 20px; text-align: center; color: var(--muted); }
+  .fallback .btn { margin-top: 14px; }
+
+  footer { text-align: center; font-size: 0.85rem; color: var(--muted); padding: 0 20px 32px; }
+
+  /* Phones: embedded PDFs rarely render, so show the open button instead */
+  @media (max-width: 700px) {
+    header { padding: 36px 16px 32px; }
+    main { padding: 32px 16px 44px; }
+    .viewer object { display: none; }
+    .projects { grid-template-columns: 1fr; }
+  }
+  @media (min-width: 701px) {
+    .mobile-only { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Mirco Paternuosto</h1>
+    <p class="role">Junior Mechanical Engineer · MSc Mechanical Engineering, KU Leuven</p>
+    <div class="contacts">
+      <a href="mailto:mircopater@gmail.com">mircopater@gmail.com</a>
+      <a href="https://www.linkedin.com/in/mirco-paternuosto-5307b532a" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="actions">
+      <a class="btn btn-primary" href="portfolio.pdf" target="_blank" rel="noopener">Open portfolio (PDF)</a>
+      <a class="btn btn-ghost" href="portfolio.pdf" download="Mirco_Paternuosto_Portfolio.pdf">Download</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h2>Projects</h2>
+    <ul class="projects">
+      <li><a href="portfolio.pdf#page=1" target="_blank" rel="noopener">
+        <span class="p-num">p. 1</span>
+        <div class="p-title">Rolling-membrane actuator</div>
+        <div class="p-meta">KU Leuven &amp; Flanders Make · Pneumatic joint, prototyping, test rig</div>
+      </a></li>
+      <li><a href="portfolio.pdf#page=2" target="_blank" rel="noopener">
+        <span class="p-num">p. 2</span>
+        <div class="p-title">Composite layup optimisation</div>
+        <div class="p-meta">Cenaero · Surrogate-based FE optimisation, HPC</div>
+      </a></li>
+      <li><a href="portfolio.pdf#page=3" target="_blank" rel="noopener">
+        <span class="p-num">p. 3</span>
+        <div class="p-title">Honeycomb to carbon grid</div>
+        <div class="p-meta">SABCA · Airbus A350 fairing cover, NX Nastran</div>
+      </a></li>
+      <li><a href="portfolio.pdf#page=4" target="_blank" rel="noopener">
+        <span class="p-num">p. 4</span>
+        <div class="p-title">4-axis stone carver</div>
+        <div class="p-meta">Personal build · Wet CNC with rotary axis, LinuxCNC</div>
+      </a></li>
+      <li><a href="portfolio.pdf#page=5" target="_blank" rel="noopener">
+        <span class="p-num">p. 5</span>
+        <div class="p-title">LockDry</div>
+        <div class="p-meta">KU Leuven · Product design, FEA, injection molding</div>
+      </a></li>
+      <li><a href="portfolio.pdf#page=6" target="_blank" rel="noopener">
+        <span class="p-num">p. 6</span>
+        <div class="p-title">Muffler design</div>
+        <div class="p-meta">KU Leuven · Acoustic BEM in Simcenter, theory check</div>
+      </a></li>
+      <li><a href="portfolio.pdf#page=7" target="_blank" rel="noopener">
+        <span class="p-num">p. 7</span>
+        <div class="p-title">Aerial refuelling hose</div>
+        <div class="p-meta">KU Leuven · Material and process selection, Granta</div>
+      </a></li>
+    </ul>
+
+    <h2>Portfolio</h2>
+    <div class="viewer">
+      <object data="portfolio.pdf#view=FitH" type="application/pdf" aria-label="Portfolio PDF">
+        <div class="fallback">
+          <p>Your browser can't show the PDF here.</p>
+          <a class="btn btn-primary" href="portfolio.pdf" target="_blank" rel="noopener">Open portfolio</a>
+        </div>
+      </object>
+      <div class="fallback mobile-only">
+        <p>Seven projects, one page each.</p>
+        <a class="btn btn-primary" href="portfolio.pdf" target="_blank" rel="noopener">Open portfolio</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>© 2026 Mirco Paternuosto</footer>
+
+</body>
+</html>
